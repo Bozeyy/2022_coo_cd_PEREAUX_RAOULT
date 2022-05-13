@@ -1,8 +1,31 @@
-import XML.ChargeurMagasin;
+import main.XML.ChargeurMagasin;
+import main.donnees.Magasin;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import java.io.IOException;
 
 
 public class TestChargeurMagasin {
-    ChargeurMagasin c = new ChargeurMagasin("FichierTest");
-    c.chargerMagasin
+
+    @Test
+    public void testChargerMagasin() throws IOException{
+        ChargeurMagasin c = new ChargeurMagasin("FichierTest");
+         Magasin m = c.chargerMagasin();
+
+         int nombre = m.getNombreCds();
+
+         assertEquals(12,nombre);
+
+    }
+
+    @Test
+    public void testChargerMagasinException(){
+        ChargeurMagasin c = new ChargeurMagasin("ttt");
+
+        IOException excep = assertThrows(IOException.class, () -> {
+            c.chargerMagasin();
+        });
+    }
 }

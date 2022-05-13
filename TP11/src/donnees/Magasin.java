@@ -1,4 +1,4 @@
-package donnees;
+package main.donnees;
 
 import java.util.ArrayList;
 
@@ -56,7 +56,7 @@ public class Magasin {
 	}
 	
 	/**
-	 * permet d'acceder à un CD
+	 * permet d'acceder ï¿½ un CD
 	 * 
 	 * @return le cd a l'indice i ou null si indice est non valide
 	 */

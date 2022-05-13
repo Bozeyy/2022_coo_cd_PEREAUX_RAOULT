@@ -1,11 +1,11 @@
-package XML;
+package main.XML;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import donnees.CD;
-import donnees.Magasin;
+import main.donnees.CD;
+import main.donnees.Magasin;
 
 /**
  * classe destinee a charger un magasin a patrir d'un nom de repertoire
