@@ -1,0 +1,13 @@
+Question 4) Compréhension du diagrame de séquence 
+
+	Dans une classe main on créer un objet nommé chargeur de type ChargeurMagasin
+On appelle ensuite dans le main la méthode chargerMagasin() :
+	--> Cette méthode commence par créer un objet de type Magasin
+	--> Ensuite elle appelle la méthode chargeurCd(fichier) qui créer un objet nommé chargerCd1 de type ChargeurCD
+	--> ensuite on appelle la méthode chargerCD()
+		qui va à son tour créer un objet cd1 de type CD
+		et appeller extrairePiste()
+		puis va ajouter la piste à l'objet cd1 avec la méthode ajouterPiste()
+		et répéter une deucième fois l'opération
+	--> ensuite dans l'objet hargeur on va ajouter à l'objet magasin cd1 avec la méthode ajoterCd()
+ensuite on renvoie l'objet Magasin créer.
