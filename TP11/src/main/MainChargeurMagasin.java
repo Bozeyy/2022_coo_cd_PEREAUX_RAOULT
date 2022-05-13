@@ -1,10 +1,10 @@
-package main;
+package main.main;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-import donnees.Magasin;
-import XML.ChargeurMagasin;
+import main.donnees.Magasin;
+import main.XML.ChargeurMagasin;
 
 /**
  * permet de charger un magasin de test
@@ -29,12 +29,15 @@ public class MainChargeurMagasin {
 		Scanner sc = new Scanner(System.in);
 		sc.nextLine();
 		sc.close();
+		/*
 
 		resultat.trierAriste();
 		System.out.println(resultat);
 
 		resultat.trierAlbum();
 		System.out.println(resultat);
+
+		 */
 
 	}
 

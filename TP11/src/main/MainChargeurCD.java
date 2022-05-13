@@ -1,9 +1,9 @@
-package main;
+package main.main;
 
 import java.io.IOException;
 
-import donnees.CD;
-import XML.ChargeurCD;
+import main.donnees.CD;
+import main.XML.ChargeurCD;
 
 /**
  * un main permettant de charger un CD
