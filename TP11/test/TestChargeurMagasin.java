@@ -29,4 +29,17 @@ public class TestChargeurMagasin {
             c.chargerMagasin();
         });
     }
+
+
+    /**
+     * test des methodes de tri de la classe Magasin
+     */
+    @Test
+    public void testTriMagasinParNomCd() throws IOException{
+        ChargeurMagasin c = new ChargeurMagasin("FichierTest");
+        Magasin m = c.chargerMagasin();
+
+        m.triCds();
+        assertEquals("Believe",m.getCd(0).getNomCD());
+    }
 }

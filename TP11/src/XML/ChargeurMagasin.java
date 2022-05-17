@@ -9,9 +9,7 @@ import main.donnees.Magasin;
 
 /**
  * classe destinee a charger un magasin a patrir d'un nom de repertoire
- * 
  * @author vthomas
- * 
  */
 public class ChargeurMagasin {
 
@@ -24,7 +22,6 @@ public class ChargeurMagasin {
 	/**
 	 * constructeur qui sepcifie ou aller chercher les fichiers pour la
 	 * construction du magasin
-	 * 
 	 * @param repertoire
 	 */
 	public ChargeurMagasin(String repertoire) {
@@ -34,13 +31,10 @@ public class ChargeurMagasin {
 	/**
 	 * methode qui permet de charger un magasin en lisant les fichiers XMl
 	 * decrivant les CDs possede dans ce magasin.</p>
-	 * 
 	 * la localisation des fichiers est precisee a la construction du chargeur
-	 * 
 	 * @return le nouveau magasin construit contenant les CDs
-	 * 
 	 * @throws IOException
-	 *             en cas d erreur de lecture
+	 * en cas d erreur de lecture
 	 */
 	public Magasin chargerMagasin() throws FileNotFoundException {
 		Magasin magasin = new Magasin();
@@ -62,9 +56,8 @@ public class ChargeurMagasin {
 
 	/**
 	 * methode qui permet de demander la lecture et l'ajout d'un CD
-	 * 
 	 * @param fichier
-	 *            fichier XML decrivant le CD
+	 * fichier XML decrivant le CD
 	 * @return CD correspondant
 	 */
 	private CD lireCd(File fichier) {
