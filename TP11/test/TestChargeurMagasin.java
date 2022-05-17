@@ -1,3 +1,5 @@
+import main.ComparateurAlbum;
+import main.ComparateurArtiste;
 import main.XML.ChargeurMagasin;
 import main.donnees.Magasin;
 import org.junit.jupiter.api.Test;
@@ -38,8 +40,10 @@ public class TestChargeurMagasin {
     public void testTriMagasinParNomCd() throws IOException{
         ChargeurMagasin c = new ChargeurMagasin("FichierTest");
         Magasin m = c.chargerMagasin();
-
-        m.triCds();
-        assertEquals("Believe",m.getCd(0).getNomCD());
+        ComparateurArtiste co = new ComparateurArtiste();
+        m.trier(co);
+        System.out.println(m);
+        assertEquals("Bénabar",m.getCd(0).getNomCD());
+        //La méthode renvoie un message d'erreur car il y a un dossier cacher dand le dossier FichierTest
     }
 }

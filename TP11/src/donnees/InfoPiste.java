@@ -12,7 +12,7 @@ package main.donnees;
  * complementaire le nom de l'artiste, le nom du CD et le numero de la piste.
  * 
  */
-public class InfoPiste {
+public class 	InfoPiste {
 
 	/**
 	 * attributs de la piste du CD

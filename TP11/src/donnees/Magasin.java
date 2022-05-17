@@ -1,6 +1,7 @@
 package main.donnees;
 
 import main.ComparateurCd;
+import main.Selecteur;
 
 import java.util.ArrayList;
 
@@ -70,36 +71,6 @@ public class Magasin {
 		return(res);
 	}
 
-	// TODO  ajouter une methode de tri
-	/**
-	 * methode triCds
-	 * une méthode qui tri les cd de la liste
-	 * par rapport au nom du cd
-	 * et une autre par le nom de l'artiste
-	 */
-	public void triCds() {
-		for (int i = 0; i < listeCds.size(); i++) {
-			for (int j = i; j < listeCds.size(); j++) {
-				if (listeCds.get(i).getNomCD().compareTo(listeCds.get(j).getNomCD()) > 0) {
-					CD tmp = listeCds.get(i);
-					listeCds.set(i, listeCds.get(j));
-					listeCds.set(j, tmp);
-				}
-			}
-		}
-	}
-
-	public void triCdsNomArtiste() {
-		for (int i = 0; i < listeCds.size(); i++) {
-			for (int j = i; j < listeCds.size(); j++) {
-				if (listeCds.get(i).getNomArtiste().compareTo(listeCds.get(j).getNomArtiste()) > 0) {
-					CD tmp = listeCds.get(i);
-					listeCds.set(i, listeCds.get(j));
-					listeCds.set(j, tmp);
-				}
-			}
-		}
-	}
 
 	public void trier(ComparateurCd comparateurCd){
 		for (int i = 0; i < listeCds.size(); i++) {
@@ -111,10 +82,21 @@ public class Magasin {
 				}
 			}
 		}
+	}
 
-
+	public ArrayList<CD> getListeCds(Selecteur selecteur) {
+		ArrayList<CD> res = new ArrayList<CD>();
+		for (int i = 0; i < listeCds.size(); i++) {
+			if (selecteur.garderCd(listeCds.get(i))) {
+				res.add(listeCds.get(i));
+			}
 		}
+		return res;
 	}
 
 
+
 }
+
+
+

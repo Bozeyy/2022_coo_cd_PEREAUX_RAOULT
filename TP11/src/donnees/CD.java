@@ -110,4 +110,11 @@ public class CD {
 	public String getNomArtiste() {
 		return nomArtiste;
 	}
+
+	/**
+	 * methode getNombrePistes
+	 */
+	public int getNombrePistes() {
+		return pistes.size();
+	}
 }

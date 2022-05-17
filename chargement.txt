@@ -11,3 +11,11 @@ On appelle ensuite dans le main la méthode chargerMagasin() :
 		et répéter une deucième fois l'opération
 	--> ensuite dans l'objet hargeur on va ajouter à l'objet magasin cd1 avec la méthode ajoterCd()
 ensuite on renvoie l'objet Magasin créer.
+
+
+TD 12:
+
+Question 14)
+	oui notre nouvelle conception permet d'introduire une nouvele manière de trier,
+il suffit juste de réer une nouvelle classe qui implémente ComparateurCD qui définit la méthode etreAvant de la manière
+quelle souhaite.
