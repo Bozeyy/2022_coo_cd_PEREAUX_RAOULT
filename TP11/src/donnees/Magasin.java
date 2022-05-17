@@ -1,5 +1,7 @@
 package main.donnees;
 
+import main.ComparateurCd;
+
 import java.util.ArrayList;
 
 /**
@@ -96,6 +98,21 @@ public class Magasin {
 					listeCds.set(j, tmp);
 				}
 			}
+		}
+	}
+
+	public void trier(ComparateurCd comparateurCd){
+		for (int i = 0; i < listeCds.size(); i++) {
+			for (int j = i; j < listeCds.size(); j++) {
+				if (comparateurCd.etreAvant(listeCds.get(i),listeCds.get(j))) {
+					CD tmp = listeCds.get(i);
+					listeCds.set(i, listeCds.get(j));
+					listeCds.set(j, tmp);
+				}
+			}
+		}
+
+
 		}
 	}
 
